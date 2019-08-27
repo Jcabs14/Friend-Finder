@@ -12,6 +12,7 @@ var friendsData = require("../data/friends");
 // ===============================================================================
 
 module.exports = function (app) {
+    
     // API GET Requests
     // Below code handles when users "visit" a page.
     // In each of the below cases when a user visits a link
@@ -24,6 +25,10 @@ module.exports = function (app) {
 
     // API POST Requests
     app.post('/api/survey',function(req,res){
+    
+        var userInput = req.body
+
+        var userScore = userInput.scores
 
     });
 
