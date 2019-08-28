@@ -24,12 +24,17 @@ module.exports = function (app) {
     });
 
     // API POST Requests
-    app.post('/api/survey',function(req,res){
-    
-        var userInput = req.body
+    app.post("/api/survey", function(req, res) {
 
-        var userScore = userInput.scores
-
-    });
+        // req.body hosts is equal to the JSON post sent from the user
+        // This works because of our body parsing middleware
+        var newPerson = req.body;
+      
+        console.log(newPerson);
+      
+        friendsData.push(newPerson);
+      
+        res.json(newPerson);
+      });
 
 };

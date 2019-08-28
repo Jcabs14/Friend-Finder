@@ -230,18 +230,10 @@
         // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
         // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
 
-        $.post("/api/friends", newPerson,
+        $.post("/api/survey", newPerson,
             function (data) {
 
-                if (data) {
-                    //if data is valadiated then you should see a pop up to see who is your new friend.
-
-                }
-
-                else {
-                    //have an alert which shows to fill out the data if all values were not fulfilled.
-                }
-
+                console.log(data);
                 // Clear the form when submitting
                 $("#name").val('');
                 ("#picture").val('');
