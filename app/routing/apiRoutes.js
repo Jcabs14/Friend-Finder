@@ -26,9 +26,20 @@ module.exports = function (app) {
     // API POST Requests
     app.post("/api/survey", function(req, res) {
 
+        var bestFriend = {
+            name: "",
+            photo: "",
+            friendDifference: 10000,
+          };
+
         // req.body hosts is equal to the JSON post sent from the user
         // This works because of our body parsing middleware
         var newPerson = req.body;
+
+        var newPersonScore = newPerson.scores;
+
+        //difference of both people
+        var difference;
       
         console.log(newPerson);
       
